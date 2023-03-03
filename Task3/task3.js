@@ -1,3 +1,4 @@
+//Задание 3
 import { Product } from "./Product";
 
 let Products = [

@@ -1,3 +1,4 @@
+//Задание 2
 function Multiply(a, b){
     a = a.split('').reverse();
     b = b.split('').reverse();

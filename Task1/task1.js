@@ -10,13 +10,13 @@ const punctuationMarks = [
     "(",
     ")",
 ];
-
+//Задание 1.1
 function FirstLetterUp(row){
     return row.toLowerCase()[0].toUpperCase() + row.slice(1);
 }
 
+//Задание 1.2
 function ConvertToCorrectRow(row){
-    
     let position = 0;
     let markPosition = 0;
     for (let mark of punctuationMarks) {
@@ -57,6 +57,7 @@ function ConvertToCorrectRow(row){
     return row;
 }
 
+//Задание 1.3
 function CountWordsInRow(row){
     let countWord = 0;
     let position = 0;
@@ -82,6 +83,7 @@ function CountWordsInRow(row){
     return countWord;
 }
 
+//Задание 1.4
 function CountEachWordInRow(row){
     row = row.toLowerCase();
     let words = new Map();
@@ -102,7 +104,7 @@ function CountEachWordInRow(row){
     return words;
 }
 
-function CheckWords(words, word){
+function checkWords(words, word){
     if (words.has(word)) {
         let count = words.get(word)+1;
         words.set(word,  count);
@@ -112,7 +114,7 @@ function CheckWords(words, word){
     }
 }
 
-function DeletePunctuationMarks(str){
+function deletePunctuationMarks(str){
     let markPosition = 0;
     for (let mark of punctuationMarks) {
         if((markPosition = str.indexOf(mark, 0)) != -1){
